@@ -12,6 +12,7 @@
   <%= csrf_meta_tags %>
   <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -33,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">3sixD</a>
+                <%= link_to(image_tag("3sixd.png", :class => "navbar-brand", :alt => "")) %>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,11 +64,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <%= image_tag("profile.png", :class => "img-responsive", :alt => "") %>
                     <div class="intro-text">
                         <span class="name">Reverse Auction</span>
                         <hr class="star-light">
-                        <span class="skills">3sixD posts a job - Contractors submit bids - 3sixD will then select a contractor</span>
+                        <span class="skills">3sixD posts a job - Contractors submit bids - 3sixD hires the selected contractor</span>
                     </div>
                 </div>
             </div>
@@ -255,7 +256,7 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>About Furaha</h3>
-                        <p>Furaha Software Inc is the best software development company in the planet, For more visit at <a href="http://www.furahasoftware.com/">Furaha Web</a></p>
+                        <p>Furaha Software Inc is one of the best software development company in the planet, For more visit at <a href="http://www.furahasoftware.com/">Furaha Web</a></p>
                     </div>
                 </div>
             </div>
