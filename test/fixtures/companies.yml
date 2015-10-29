@@ -5,7 +5,7 @@ one:
   description: MyString
   sub_description: MyString
   about: MyString
-  location: MyString
+  address: MyString
   facebook: MyString
   google_plus: MyString
   twitter: MyString
@@ -17,7 +17,7 @@ two:
   description: MyString
   sub_description: MyString
   about: MyString
-  location: MyString
+  address: MyString
   facebook: MyString
   google_plus: MyString
   twitter: MyString
