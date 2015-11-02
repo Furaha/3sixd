@@ -1,0 +1,40 @@
+<% provide(:title, "All companies") %>
+<div class="row">
+  <div class="col-md-12 text-center">
+  	<br/><br/><br/>
+    <h4>Company Details</h4>
+    <hr class="star-primary"><br/>
+	<div class="row">
+	  <div class="panel panel-default">
+	    <div class="table-responsive">
+	      <table class="table table-bordered table-hover table-heading">
+	        <thead>
+	          <tr class="success">
+	            <th class="text-center">Company Name</th>
+	            <th class="text-center">Description</th>
+	            <th class="text-center">Address</th>
+	            <th class="text-center">Actions</th>
+	          </tr>
+	        </thead>
+	        <tbody class="companies-tab-pane">
+	          <% @companies.each do |company| %>
+	            <tr>
+	              <td class="text-center"><%= company.name %></td>
+	              <td class="text-center"><%= company.description %></td>
+	              <td class="text-center"><%= company.address %></td>    
+	              <td class="text-center">
+	                <%= link_to "Edit", edit_company_path(company), 
+	                    class: "btn btn-sm btn-default" %> |
+	                <%= link_to "Delete", company_path(company), method: :delete, data: { confirm: 
+	                    "Are you sure you want to delete this company: #{company.name}? click on OK to delete or Cancel to terminate the process" }, 
+	                     class: "btn btn-sm btn-danger" %>
+	              </td>
+	            </tr>
+	          <% end %>
+	        </tbody>
+	      </table>
+	    </div>
+	  </div>
+	</div>
+  </div>
+</div>
