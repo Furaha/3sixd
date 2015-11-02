@@ -23,6 +23,11 @@
   <![endif]-->
 </head>
 <body id="page-top" class="index">
+  <div class="row-fluid">
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+    <% end %>
+  </div>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -68,11 +73,6 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <div class="row">
-      <% flash.each do |key, value| %>
-        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
-      <% end %>
-    </div>
 
     <!-- Header -->
     <header>
