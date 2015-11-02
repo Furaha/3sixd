@@ -1,0 +1,14 @@
+<%= form_for (@company), :html => {:class => "form-horizontal center"} do |f| %>
+  <div class="form-group"> 
+    <%= f.label :name, "Company name:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :name, required: true, class: "form-control" %>
+    </div>
+    
+    <%= f.label :description, "Company description:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :description, required: true, class: "form-control" %>
+    </div>
+  </div>
+  
+<% end %>
