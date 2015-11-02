@@ -68,6 +68,11 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <div class="row">
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+      <% end %>
+    </div>
 
     <!-- Header -->
     <header>
@@ -76,9 +81,9 @@
                 <div class="col-lg-12">
                     <%= image_tag("profile.png", :class => "img-responsive", :alt => "") %>
                     <div class="intro-text">
-                        <span class="name">3sixD Consulting</span>
+                        <span class="name"><%= @company.description %></span>
                         <hr class="star-light">
-                        <span class="skills">We create openings - Potential candidates apply for the job - We will hire the succesfully candidate</span>
+                        <span class="skills"><%= @company.sub_description %></span>
                     </div>
                 </div>
             </div>
@@ -111,11 +116,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>3sixD is the site where recruiter posts various jobs to proffesionals/contractors online and them depending on the job/service they are qualified for will apply for that job.
-                    Finally a recruiter will be able to select the qualified pessonel depending on his needs for the job he posted.</p>
+                    <p><%= @company.about %></p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're an individual, corporate or government buyer looking for a job, or a contractor contract, this site is the perfect place for you!</p>
+                    <p><%= @company.about %></p>
                 </div>
             </div>
         </div>
@@ -126,7 +130,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contact 3sixD</h2>
+                    <h2>Contact <%= @company.name %></h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -183,25 +187,35 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>3sixD Corporation<br>USA, 78995</p>
+                        <p><%= @company.description %><br><%= @company.address %></p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                              <a href="<%= @company.facebook %>" class="btn-social btn-outline" 
+                                target="_blank"><i class="fa fa-fw fa-facebook"></i>
+                              </a>
                             </li>
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                              <a href="<%= @company.google_plus %>" class="btn-social btn-outline" 
+                                target="_blank"><i class="fa fa-fw fa-google-plus"></i>
+                              </a>
                             </li>
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                              <a href="<%= @company.twitter %>" class="btn-social btn-outline" 
+                                target="_blank"><i class="fa fa-fw fa-twitter"></i>
+                              </a>
                             </li>
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                              <a href="<%= @company.linkedin %>" class="btn-social btn-outline" 
+                                target="_blank"><i class="fa fa-fw fa-linkedin"></i>
+                              </a>
                             </li>
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                              <a href="<%= @company.dribble %>" class="btn-social btn-outline" 
+                                target="_blank"><i class="fa fa-fw fa-dribbble"></i>
+                              </a>
                             </li>
                         </ul>
                     </div>
@@ -216,7 +230,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; 3sixD <%= Date.today.strftime("%Y") %>
+                        Copyright &copy; <%= @company.name %> <%= Date.today.strftime("%Y") %>
                     </div>
                 </div>
             </div>
