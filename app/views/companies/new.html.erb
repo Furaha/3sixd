@@ -1,2 +1,9 @@
-<h1>Companies#new</h1>
-<p>Find me in app/views/companies/new.html.erb</p>
+<% provide(:title, "Add a new company") %>
+<div class="row">
+  <div class="col-md-12 text-center">
+  	<br/><br/><br/><br/>
+    <h4>Provide your company details in a form below</h4>
+    <hr class="star-primary"><br/>
+	  <%= render "form" %>
+  </div>
+</div>
