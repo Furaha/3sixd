@@ -8,7 +8,7 @@ Company.create!([
     posted.", 
     address: 'USA-78995', facebook: "https://facebook.com", 
     twitter: "https://twitter.com", google_plus: "https://plus.google.com", 
-    linkedin: "https://www.linkedin.com", dribble: "https://dribble.com"
+    linkedin: "https://www.linkedin.com", dribble: "https://dribbble.com"
   },
   { name: "Furaha", description: "Furaha Software Inc,",
     sub_description: "The center for Software Development - Hire us - We will provide you with the 
@@ -17,6 +17,6 @@ Company.create!([
     For more visit at <a href='http://www.furahasoftware.com/'>Furaha Web</a>", 
     address: 'USA-78995', facebook: "https://facebook.com", 
     twitter: "https://twitter.com", google_plus: "https://plus.google.com", 
-    linkedin: "https://www.linkedin.com", dribble: "https://dribble.com"
+    linkedin: "https://www.linkedin.com", dribble: "https://dribbble.com"
   }
 ])
