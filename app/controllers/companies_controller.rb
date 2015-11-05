@@ -25,7 +25,7 @@ class CompaniesController < ApplicationController
     respond_to do |format| 
       if @company.update(company_params)
         flash[:success] = "Successfully updated the view contents for company: #{@company.name}"
-  	    format.html { redirect_to companies_path }
+        format.html { redirect_to companies_path }
       else
         flash[:danger] = "Sorry, unable to update the view contents for the company: #{@company.name}"
         format.html { render action: 'edit' }
