@@ -28,57 +28,55 @@
       <%= content_tag(:div, value, class: "alert alert-#{key}") %>
     <% end %>
   </div>
-    <%= render 'layouts/header' %>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <%= image_tag("profile.png", :class => "img-responsive", :alt => "") %>
-                    <div class="intro-text">
-                      <span class="name"><%= @company.description %></span>
-                      <hr class="star-light">
-                      <span class="skills"><%= @company.sub_description %></span>
-                    </div>
-                </div>
-            </div>
+  <%= render 'layouts/header' %>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <%= image_tag("profile.png", :class => "img-responsive", :alt => "") %>
+          <div class="intro-text">
+            <span class="name"><%= @company.description %></span>
+            <hr class="star-light">
+            <span class="skills"><%= @company.sub_description %></span>
+          </div>
         </div>
-    </header>
-
-    <!-- Job Grid Section -->
-    <section id="job">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Jobs Posted</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-              <%= yield %>
-            </div>
+      </div>
+    </div>
+  </header>
+  <!-- Job Grid Section -->
+  <section id="job">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Jobs Posted</h2>
+          <hr class="star-primary">
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p><%= @company.about %></p>
-                </div>
-                <div class="col-lg-4">
-                    <p><%= @company.about %></p>
-                </div>
-            </div>
+      </div>
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section class="success" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center"> 
+          <h2>About</h2>
+          <hr class="star-light">
         </div>
-    </section>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-2">
+          <p><%= @company.about %></p>
+        </div>
+        <div class="col-lg-4">
+          <p><%= @company.about %></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- Contact Section -->
     <section id="contact">
