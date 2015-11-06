@@ -1,6 +1,7 @@
 Company.create!([
-  { name: "3sixD", description: "3SIXD CONSULTING",
-    sub_description: "We create openings - Potential candidate apply for the job - We will hire the 
+  { 
+    name: "3sixD", title: "3SIXD CONSULTING",
+    description: "We create openings - Potential candidate apply for the job - We will hire the 
     succesfully candidate", 
     about: "3sixD is the site where recruiter posts various jobs to proffesionals/contractors online 
     and them depending on the job/service they are qualified for will apply for that job. Finally a 
@@ -10,8 +11,9 @@ Company.create!([
     twitter: "https://twitter.com", google_plus: "https://plus.google.com", 
     linkedin: "https://www.linkedin.com", dribble: "https://dribbble.com"
   },
-  { name: "Furaha", description: "Furaha Software Inc,",
-    sub_description: "The center for Software Development - Hire us - We will provide you with the 
+  { 
+    name: "Furaha", title: "Furaha Software Inc,",
+    description: "The center for Software Development - Hire us - We will provide you with the 
     best software in turn", 
     about: "Furaha Software Inc is one of the best software development company in the planet, 
     For more visit at <a href='http://www.furahasoftware.com/'>Furaha Web</a>", 

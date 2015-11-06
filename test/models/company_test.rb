@@ -9,11 +9,11 @@ class CompanyTest < ActiveSupport::TestCase
   test 'has a name' do
     assert_equal 'Furaha', @company.name
   end
-  test 'has description' do
-    assert_equal 'Furaha Sotware Inc', @company.description
+  test 'has title' do
+    assert_equal 'Furaha Sotware Inc', @company.title
   end
-  test 'has sub description' do
-    assert_equal 'The center for Software Development - Hire us - We will provide you with the best software in turn', @company.sub_description
+  test 'has description' do
+    assert_equal 'The center for Software Development - Hire us - We will provide you with the best software in turn', @company.description
   end
   test 'has address' do
     assert_equal 'USA-78995', @company.address

@@ -46,11 +46,11 @@
                     <div class="footer-col col-md-4">
                       <h3>Location</h3>
                       <% if current_page?(companies_path) %>
-                        <p><%= Company.first.description %><br><%= Company.first.address %></p>
+                        <p><%= Company.first.title %><br><%= Company.first.address %></p>
                       <% elsif current_page?(new_company_path) %>
                         <p>Company name<br>Address, City</p>
                       <% elsif @company.present? && !(current_page?(new_company_path)) %>
-                        <p><%= @company.description %><br><%= @company.address %></p>
+                        <p><%= @company.title %><br><%= @company.address %></p>
                       <% end %>
                     </div>
                     <div class="footer-col col-md-4">

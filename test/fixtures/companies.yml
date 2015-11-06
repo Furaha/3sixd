@@ -2,8 +2,8 @@
 
 3sixD:
   name: 3sixD
-  description: 3sixD Consulting
-  sub_description: We create openings - Potential candidate apply for the job - We will hire the succesfully candidate
+  title: 3sixD Consulting
+  description: We create openings - Potential candidate apply for the job - We will hire the succesfully candidate
   about: 3sixD is the site where recruiter posts various jobs to proffesionals/contractors online and them depending on the job/service they are qualified for will apply for that job
   address: USA-98995
   facebook: https://facebook.com
@@ -14,8 +14,8 @@
 
 Furaha:
   name: Furaha
-  description: Furaha Sotware Inc
-  sub_description: The center for Software Development - Hire us - We will provide you with the best software in turn
+  title: Furaha Sotware Inc
+  description: The center for Software Development - Hire us - We will provide you with the best software in turn
   about: "Furaha Software Inc is one of the best software development company in the planet, For more visit at <a href='http://www.furahasoftware.com/'>Furaha Web</a>"
   address: USA-78995
   facebook: https://facebook.com

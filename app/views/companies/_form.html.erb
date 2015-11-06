@@ -4,9 +4,9 @@
     <div class="col-md-4">
       <%= f.text_field :name, required: true, class: "form-control", placeholder: "Palmer" %>
     </div>
-    <%= f.label :description, "Company description:", class: "col-md-2 control-label" %>
+    <%= f.label :title, "Company title:", class: "col-md-2 control-label" %>
     <div class="col-md-4">
-      <%= f.text_field :description, required: true, class: "form-control", 
+      <%= f.text_field :title, required: true, class: "form-control", 
         placeholder: "Palmer Tech" %>
     </div>
   </div>
@@ -45,9 +45,9 @@
     </div>
   </div>
   <div class="form-group"> 
-    <%= f.label :sub_description, "Company tagline:", class: "col-md-2 control-label" %>
+    <%= f.label :description, "Company tagline:", class: "col-md-2 control-label" %>
     <div class="col-md-4">
-      <%= f.text_area :sub_description, required: true, class: "form-control", 
+      <%= f.text_area :description, required: true, class: "form-control", 
         placeholder: "Best Technologies Choices - With best products - For better life" %>
     </div>
     <%= f.label :about, "Company about:", class: "col-md-2 control-label" %>
