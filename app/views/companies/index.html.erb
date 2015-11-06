@@ -1,10 +1,16 @@
 <% provide(:title, "All companies") %>
 <div class="row">
-  <div class="col-md-12 text-center">
-  	<br/><br/><br/>
-    <h4>Subscribed Companies Details</h4>
+  <div class="col-md-12">
+  	<br/><br/><br/><br/>
+    <h4 class="text-center">Subscribed Companies Details</h4>
     <hr class="star-primary"><br/>
 	<div class="row">
+	  <div class="col-md-12">
+	  	<div class="add-company-button">
+	  	  <%= link_to "Add new company", new_company_path, class: "btn btn-success" %>
+	  	</div><br/><br/>
+	  </div>
+	  <div class="col-md-12">
 	  <div class="panel panel-default">
 	    <div class="table-responsive">
 	      <table class="table table-bordered table-hover table-heading">
@@ -34,7 +40,7 @@
 	        </tbody>
 	      </table>
 	    </div>
-	  </div>
+	  </div></div>
 	</div>
   </div>
-</div>
+</div><br/><br/>
