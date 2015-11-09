@@ -9,7 +9,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to(image_tag("3sixd.png", :class => "navbar-brand", :alt => "Company logo"), root_path) %>
+      <% if Company.last.logo.present? %>
+        <%= link_to root_path do %>
+          <%= image_tag (Company.last.logo_url(:thumb)), :class => "navbar-brand", :alt => "Company logo" %>
+        <% end %>
+      <% else %>
+        <%= link_to root_path do %>
+          <%= image_tag "3sixd.png", :class => "navbar-brand", :alt => "Company logo" %>
+        <% end %>
+      <% end %>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
