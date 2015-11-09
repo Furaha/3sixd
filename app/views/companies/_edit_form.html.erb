@@ -50,6 +50,13 @@
       <%= f.text_area :about, required: true, class: "form-control" %>
     </div>
   </div>
+  <div class="form-group"> 
+    <%= f.label :logo, "Company Logo:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">    
+      <%= f.file_field :logo %>
+      <%= f.hidden_field :logo_cache %>
+    </div>
+  </div>
   <div class="form-group">
     <div class="col-sm-2">
       <%= f.button :submit, class: 'btn btn-primary', data: { :disable_with => "Saving..." } do %>
