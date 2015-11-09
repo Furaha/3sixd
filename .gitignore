@@ -16,3 +16,25 @@
 !/log/.keep
 /tmp
 vendor/ruby
+
+/.vagrant
+
+# Ignore other unneeded files.
+database.yml
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
+
+# Ignore application configuration
+/config/application.yml
+/config/environment_variables.yml
+
+# Ignore uploaded images
+/public/uploads/
+
+# Ignore vendored gems
+vendor/ruby
