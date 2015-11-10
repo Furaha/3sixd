@@ -46,7 +46,7 @@
                     <div class="footer-col col-md-4">
                       <h3>Location</h3>
                       <% if current_page?(companies_path) %>
-                        <p><%= Company.first.title %><br><%= Company.first.address %></p>
+                        <p><%= Company.last.title %><br><%= Company.last.address %></p>
                       <% elsif current_page?(new_company_path) %>
                         <p>Company name<br>Address, City</p>
                       <% elsif @company.present? && !(current_page?(new_company_path)) %>
@@ -58,7 +58,7 @@
                         <ul class="list-inline">
                             <li>
                               <% if current_page?(companies_path) %>
-                                <a href="<%= Company.first.facebook %>" class="btn-social btn-outline"
+                                <a href="<%= Company.last.facebook %>" class="btn-social btn-outline"
                                   target="_blank"><i class="fa fa-fw fa-facebook"></i>
                                 </a>
                               <% elsif current_page?(new_company_path) %>
@@ -73,7 +73,7 @@
                             </li>
                             <li>
                               <% if current_page?(companies_path) %>
-                                <a href="<%= Company.first.google_plus %>" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-google-plus"></i>
+                                <a href="<%= Company.last.google_plus %>" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-google-plus"></i>
                                 </a>
                               <% elsif current_page?(new_company_path) %>
                                 <a href="#" class="btn-social btn-outline">
@@ -87,7 +87,7 @@
                             </li>
                             <li>
                               <% if current_page?(companies_path) %>
-                                <a href="<%= Company.first.twitter %>" class="btn-social btn-outline"
+                                <a href="<%= Company.last.twitter %>" class="btn-social btn-outline"
                                   target="_blank"><i class="fa fa-fw fa-twitter"></i>
                                 </a>
                               <% elsif current_page?(new_company_path) %>
@@ -102,7 +102,7 @@
                             </li>
                             <li>
                               <% if current_page?(companies_path) %>
-                                <a href="<%= Company.first.linkedin %>" class="btn-social btn-outline"
+                                <a href="<%= Company.last.linkedin %>" class="btn-social btn-outline"
                                   target="_blank"><i class="fa fa-fw fa-linkedin"></i>
                                 </a>
                               <% elsif current_page?(new_company_path) %>
@@ -117,7 +117,7 @@
                             </li>
                             <li>
                               <% if current_page?(companies_path) %>
-                                <a href="<%= Company.first.dribble %>" class="btn-social btn-outline"
+                                <a href="<%= Company.last.dribble %>" class="btn-social btn-outline"
                                   target="_blank"><i class="fa fa-fw fa-dribbble"></i>
                                 </a>
                               <% elsif current_page?(new_company_path) %>
@@ -145,7 +145,7 @@
                     <div class="col-lg-12">
                         &copy; <%= Date.today.strftime("%Y") %>
                         <% if current_page?(companies_path) %>
-                          <%= Company.first.name %>
+                          <%= Company.last.name %>
                         <% elsif current_page?(new_company_path) %>
                           <%= 'Company' %>
                         <% elsif @company.present? && !(current_page?(new_company_path)) %>
