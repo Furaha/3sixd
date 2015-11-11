@@ -22,11 +22,14 @@ class CompaniesControllerTest < ActionController::TestCase
   end
 
   def test_logo_uploading
+    company = Company.last
+    assert_equal(File.basename(file.path), company.logo_identifier)
+  end
+
+  def company_name_after_logo_uploaded
     name = '3sixD'
-    assert_response 200
     company = Company.last
     assert_equal name, company.name
-    assert_equal(File.basename(file.path), company.logo_identifier)
   end
 
   test "should get add new company page" do
