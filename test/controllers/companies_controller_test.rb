@@ -51,28 +51,28 @@ class CompaniesControllerTest < ActionController::TestCase
   end
 
   test "is invalid without company about" do
-    # Delete name before assert company is called
+    # Delete about before assert company is called
     company = Company.new valid_company_params
     valid_company_params.delete :about
     assert company.errors[:about], "Missing error when without company about"
   end
 
   test "is invalid without company address" do
-    # Delete name before assert company is called
+    # Delete address before assert company is called
     company = Company.new valid_company_params
     valid_company_params.delete :address
     assert company.errors[:address], "Missing error when without company address"
   end
 
   test "is invalid without company title" do
-    # Delete name before assert company is called
+    # Delete title before assert company is called
     company = Company.new valid_company_params
     valid_company_params.delete :title
     assert company.errors[:title], "Missing error when without company title"
   end
 
   test "is invalid without company description" do
-    # Delete name before assert company is called
+    # Delete description before assert company is called
     company = Company.new valid_company_params
     valid_company_params.delete :description
     assert company.errors[:description], "Missing error when without company description"
