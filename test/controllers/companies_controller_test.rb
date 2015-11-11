@@ -32,6 +32,24 @@ class CompaniesControllerTest < ActionController::TestCase
     assert_equal name, company.name
   end
 
+  def valid_company_params 
+    { name: "3sixd", title: '3sixd Consulting', description: 'Upload Cvs - Get hired', 
+      about: '3sixD posts jobs for the positions which they are currently hiring for and 
+      you can apply to the ones that interest you', address: '3000, Silcon Valley', logo: "3six.png" }
+  end
+
+  test "is valid with valid company params" do
+    company = Company.new valid_company_params
+    assert company.valid?, "Can't create with valid params: #{company.errors.messages}"
+  end
+
+  test "is invalid without company name" do
+    # Delete name before assert company is called
+    company = Company.new valid_company_params
+    valid_company_params.delete :name
+    assert company.errors[:name], "Missing error when without company name"
+  end
+
   test "should get add new company page" do
     get :new
     assert_response :success
