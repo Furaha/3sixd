@@ -7,4 +7,5 @@ class Company < ActiveRecord::Base
   validates :description,     presence: true
   validates :about,           presence: true
   validates :address,         presence: true
+  has_many  :users
 end
