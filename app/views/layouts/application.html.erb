@@ -23,14 +23,14 @@
   <![endif]-->
 </head>
 <body id="page-top" class="index">
-  <div class="row-fluid">
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "alert alert-#{key}") %>
-    <% end %>
-  </div>
     <%= render 'layouts/header' %>
-    
     <section>
+      <% if notice %>
+        <div class="alert alert-success"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-danger"><%= alert %></div>
+      <% end %>
       <div class="container">
         <div class="row" id="application-layout">
           <%= yield %>
