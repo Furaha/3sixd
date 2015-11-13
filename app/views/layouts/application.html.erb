@@ -22,7 +22,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body id="page-top" class="index">
+<body class="index" id="<%= user_signed_in? ? 'page-top' : 'unsigned-in-users-page' %>">
   <% if user_signed_in? %>
     <%= render 'layouts/header' %>
     <section>
