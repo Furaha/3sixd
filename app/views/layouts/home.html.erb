@@ -34,7 +34,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <%= image_tag("profile.png", :class => "img-responsive", :alt => "") %>
+          <% if Company.last.intro_image.present? %>
+            <%= image_tag(Company.last.intro_image_url(:thumb), :class => "img-responsive", :alt => "Company intro image") %>
+          <% else %>
+            <%= image_tag("profile.png", :class => "img-responsive", :alt => "Company intro image") %>
+          <% end %>
           <div class="intro-text">
             <span class="name"><%= @company.title %></span>
             <hr class="star-light">
@@ -68,10 +72,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-lg-offset-2">
-          <p><%= @company.about %></p>
-        </div>
-        <div class="col-lg-4">
+        <div class="col-lg-8 col-lg-offset-2">
           <p><%= @company.about %></p>
         </div>
       </div>

@@ -5,25 +5,46 @@ class CompaniesControllerTest < ActionController::TestCase
     @company = companies(:Furaha)
   end
 
-  def file
+  def logo
     @file ||= File.open(File.expand_path( '../../file/3sixd.png', __FILE__))
   end
 
-  def uploaded_file_object(klass, attribute, file, content_type = 'image/png')
-    filename = File.basename(file.path)
+  def intro_image
+    @file ||= File.open(File.expand_path( '../../file/intro_image.png', __FILE__))
+  end
+
+  def uploaded_logo(klass, attribute, logo, content_type = 'image/png')
+    filename = File.basename(logo.path)
     klass_label = klass.to_s.underscore
    
     ActionDispatch::Http::UploadedFile.new(
-      tempfile: file,
+      tempfile: logo,
       filename: filename,
       head: %Q{Content-Disposition: form-data; name="#{klass_label}[#{attribute}]"; filename="#{filename}"},
       content_type: content_type
     )
   end
 
-  def test_logo_uploading
+  def logo_uploading
     company = Company.last
-    assert_equal(File.basename(file.path), company.logo_identifier)
+    assert_equal(File.basename(logo.path), company.logo_identifier)
+  end
+
+  def uploaded_intro_image(klass, attribute, intro_image, content_type = 'image/png')
+    filename = File.basename(intro_image.path)
+    klass_label = klass.to_s.underscore
+   
+    ActionDispatch::Http::UploadedFile.new(
+      tempfile: intro_image,
+      filename: filename,
+      head: %Q{Content-Disposition: form-data; name="#{klass_label}[#{attribute}]"; filename="#{filename}"},
+      content_type: content_type
+    )
+  end
+
+  def intro_image_uploading
+    company = Company.last
+    assert_equal(File.basename(intro_image.path), company.intro_image_identifier)
   end
 
   def company_name_after_logo_uploaded
