@@ -23,6 +23,7 @@
   <![endif]-->
 </head>
 <body id="page-top" class="index">
+  <% if user_signed_in? %>
     <%= render 'layouts/header' %>
     <section>
       <% if notice %>
@@ -156,6 +157,21 @@
             </div>
         </div>
     </footer>
+  <% else %>
+    <% if notice %>
+      <div class="alert alert-success"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger"><%= alert %></div>
+    <% end %>
+    <section>
+      <div class="container">
+        <div class="row">
+          <%= yield %>
+        </div>
+      </div>
+    </section>
+  <% end %>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visible-sm">
