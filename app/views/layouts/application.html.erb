@@ -51,8 +51,6 @@
                         <p>Company name<br>Address, City</p>
                       <% elsif @company.present? && !(current_page?(new_company_path)) %>
                         <p><%= @company.title %><br><%= @company.address %></p>
-                      <% elsif !(user_signed_in?) %>
-                        <p>3sixD Consulting<br>300000, Nashville</p>
                       <% end %>
                     </div>
                     <div class="footer-col col-md-4">
@@ -71,10 +69,6 @@
                                 <a href="<%= @company.facebook %>" class="btn-social btn-outline"
                                   target="_blank"><i class="fa fa-fw fa-facebook"></i>
                                 </a>
-                              <% elsif !(user_signed_in?) %>
-                                <a href="#" class="btn-social btn-outline">
-                                  <i class="fa fa-fw fa-facebook"></i>
-                                </a>
                               <% end %>
                             </li>
                             <li>
@@ -88,10 +82,6 @@
                               <% elsif @company.present? && !(current_page?(new_company_path)) %>
                                 <a href="<%= @company.google_plus %>" class="btn-social btn-outline"
                                   target="_blank"><i class="fa fa-fw fa-google-plus"></i>
-                                </a>
-                              <% elsif !(user_signed_in?) %>
-                                <a href="#" class="btn-social btn-outline">
-                                  <i class="fa fa-fw fa-google-plus"></i>
                                 </a>
                               <% end %>
                             </li>
@@ -108,10 +98,6 @@
                                 <a href="<%= @company.twitter %>" class="btn-social btn-outline"
                                   target="_blank"><i class="fa fa-fw fa-twitter"></i>
                                 </a>
-                              <% elsif !(user_signed_in?) %>
-                                <a href="#" class="btn-social btn-outline">
-                                  <i class="fa fa-fw fa-twitter"></i>
-                                </a>
                               <% end %>
                             </li>
                             <li>
@@ -127,10 +113,6 @@
                                 <a href="<%= @company.linkedin %>" class="btn-social btn-outline"
                                   target="_blank"><i class="fa fa-fw fa-linkedin"></i>
                                 </a>
-                              <% elsif !(user_signed_in?) %>
-                                <a href="#" class="btn-social btn-outline">
-                                  <i class="fa fa-fw fa-linkedin"></i>
-                                </a>
                               <% end %>
                             </li>
                             <li>
@@ -145,10 +127,6 @@
                               <% elsif @company.present? && !(current_page?(new_company_path)) %>
                                 <a href="<%= @company.dribble %>" class="btn-social btn-outline"
                                   target="_blank"><i class="fa fa-fw fa-dribbble"></i>
-                                </a>
-                              <% elsif !(user_signed_in?) %>
-                                <a href="#" class="btn-social btn-outline">
-                                  <i class="fa fa-fw fa-dribbble"></i>
                                 </a>
                               <% end %>
                             </li>
