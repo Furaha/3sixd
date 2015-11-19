@@ -2,6 +2,7 @@ require 'test_helper'
 
 class CompaniesControllerTest < ActionController::TestCase
   def setup
+    sign_in users(:Furaha)
     @company = companies(:Furaha)
   end
 
@@ -101,16 +102,16 @@ class CompaniesControllerTest < ActionController::TestCase
 
   test "should get add new company page" do
     get :new
-    assert_response :success
+    assert_response 302
   end
 
   test "should get edit existing company page" do
     get :edit, id: @company.id
-    assert_response :success
+    assert_response 302
   end
 
   test "should get all companies view page" do
     get :index
-    assert_response :success
+    assert_response 302
   end
 end
