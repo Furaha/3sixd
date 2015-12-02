@@ -9,9 +9,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <% if Company.last.logo.present? %>
+      <% if Company.find_by(name: '3sixD').logo.present? %>
         <%= link_to root_path do %>
-          <%= image_tag (Company.last.logo_url(:thumb)), :class => "navbar-brand", :alt => "Company logo" %>
+          <%= image_tag (Company.find_by(name: '3sixD').logo_url(:thumb)), :class => "navbar-brand", :alt => "Company logo" %>
         <% end %>
       <% else %>
         <%= link_to root_path do %>

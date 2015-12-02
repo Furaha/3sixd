@@ -4,6 +4,6 @@ class JobsController < ApplicationController
     # The line below to load a company is not supposed to be like that, so later when we have 
     # the User model setup and once associted with Company then the line will change to 
     # @company = @current_user.company
-    @company = Company.last
+    @company = Company.find_by(name: '3sixD')
   end
 end

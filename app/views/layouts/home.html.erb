@@ -34,8 +34,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <% if Company.last.intro_image.present? %>
-            <%= image_tag(Company.last.intro_image_url(:thumb), :class => "img-responsive", :alt => "Company intro image") %>
+          <% if Company.find_by(name: '3sixD').intro_image.present? %>
+            <%= image_tag(Company.find_by(name: '3sixD').intro_image_url(:thumb), :class => "img-responsive", :alt => "Company intro image") %>
           <% else %>
             <%= image_tag("profile.png", :class => "img-responsive", :alt => "Company intro image") %>
           <% end %>
