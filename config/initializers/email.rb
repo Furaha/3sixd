@@ -16,7 +16,7 @@ if Rails.env.development?
 end
 
 if Rails.env.production?
-  ActionMailer::Base.default_url_options[:host] = "http://furaha-oily.herokuapp.com"
+  ActionMailer::Base.default_url_options[:host] = "http://fstage-3sixd.herokuapp.com"
   ActionMailer::Base.smtp_settings = {
   :address => "smtp.gmail.com",
   :port => "587",
