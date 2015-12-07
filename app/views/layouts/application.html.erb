@@ -45,7 +45,6 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                      <% @default_company = Company.find_by(name: '3sixD') || Company.find_by(name: '3sixd') %>
                       <h3>Location</h3>
                       <% if current_page?(companies_path) %>
                         <p><%= @default_company.title %><br><%= @default_company.address %></p>
