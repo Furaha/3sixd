@@ -37,6 +37,7 @@ class CompaniesController < ApplicationController
 
   def index
     @companies = Company.all
+    @default_company =  Company.find_by(default: 'true')
   end
 
   def destroy
