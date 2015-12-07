@@ -114,4 +114,10 @@ class CompaniesControllerTest < ActionController::TestCase
     get :index
     assert_response 302
   end
+
+  test "should have the default company when accesing the companies page" do
+    get :index
+    default_company = Company.find_by(default: true).name
+    assert_equal default_company, '3sixD'
+  end
 end

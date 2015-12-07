@@ -12,6 +12,7 @@
   linkedin: https://www.linkedin.com
   dribble: https://dribble.com
   logo: 3sixd.png
+  default: 'true'
 
 Furaha:
   name: Furaha
@@ -25,3 +26,4 @@ Furaha:
   linkedin: https://www.linkedin.com
   dribble: https://dribble.com
   logo: furaha.png
+  default: 'false'
