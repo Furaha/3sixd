@@ -120,4 +120,16 @@ class CompaniesControllerTest < ActionController::TestCase
     default_company = Company.find_by(default: true)
     assert_not_nil default_company
   end
+
+  test "should have default company's title when accessing the companies page" do
+    get :index
+    default_company = Company.find_by(default: true)
+    assert_equal default_company.title, '3sixD Consulting'
+  end
+
+  test "should have default company's address when accessing the companies page" do
+    get :index
+    default_company = Company.find_by(default: true)
+    assert_equal default_company.address, 'USA-98995'
+  end
 end
