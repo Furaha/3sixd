@@ -118,6 +118,6 @@ class CompaniesControllerTest < ActionController::TestCase
   test "should have the default company when accesing the companies page" do
     get :index
     default_company = Company.find_by(default: true)
-    assert_not_equal nil, default_company
+    assert_not_nil default_company
   end
 end
