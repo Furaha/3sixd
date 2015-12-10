@@ -11,10 +11,34 @@
     </div>
   </div>
   <div class="form-group"> 
-    <%= f.label :address, "Company address:", class: "col-md-2 control-label" %>
+    <%= f.label :address1, "Company address1:", class: "col-md-2 control-label" %>
     <div class="col-md-4">
-      <%= f.text_field :address, required: true, class: "form-control", 
-        placeholder: "333379, Nashville" %>
+      <%= f.text_field :address1, required: true, class: "form-control", 
+        placeholder: "700 Craighead St" %>
+    </div>
+    
+    <%= f.label :address2, "Company address2:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :address2, class: "form-control", placeholder: "Suite 106" %>
+    </div>
+  </div>
+  <div class="form-group"> 
+    <%= f.label :city, "City:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :city, required: true, class: "form-control", 
+        placeholder: "Nashville" %>
+    </div>
+    
+    <%= f.label :state, "State:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :state, class: "form-control", placeholder: "TN" %>
+    </div>
+  </div>
+  <div class="form-group"> 
+    <%= f.label :zip, "Zip code:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :zip, required: true, class: "form-control", 
+        placeholder: "37204" %>
     </div>
     
     <%= f.label :facebook, "Facebook account:", class: "col-md-2 control-label" %>

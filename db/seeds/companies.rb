@@ -1,6 +1,6 @@
 Company.create!([
   { 
-    name: "3sixD", title: "3SIXD CONSULTING",
+    name: "3sixD", title: "3sixd Consulting",
     description: "We create openings - Potential candidate apply for the job - We will hire the 
     succesfully candidate", 
     about: "3sixD is the site where recruiter posts various jobs to proffesionals/contractors online 
