@@ -1,6 +1,6 @@
 class AddAddress1Address2CityStateAndZipToCompany < ActiveRecord::Migration
   def change
-  	remove_column :companies, :address,  :string
+    remove_column :companies, :address,  :string
     add_column    :companies, :address1, :string
     add_column    :companies, :address2, :string
     add_column    :companies, :city,     :string
