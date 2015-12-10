@@ -57,7 +57,8 @@ class CompaniesControllerTest < ActionController::TestCase
   def valid_company_params 
     { name: "3sixd", title: '3sixd Consulting', description: 'Upload Cvs - Get hired', 
       about: '3sixD posts jobs for the positions which they are currently hiring for and 
-      you can apply to the ones that interest you', address: '3000, Silcon Valley', logo: "3six.png" }
+      you can apply to the ones that interest you', address1: '701 Craighead St', address2: 'Suite 107',
+      city: 'Nashville', state: 'TN', zip: '37207', logo: "3six.png" }
   end
 
   test "is valid with valid company params" do
@@ -82,8 +83,8 @@ class CompaniesControllerTest < ActionController::TestCase
   test "is invalid without company address" do
     # Delete address before assert company is called
     company = Company.new valid_company_params
-    valid_company_params.delete :address
-    assert company.errors[:address], "Missing error when without company address"
+    valid_company_params.delete :address1
+    assert company.errors[:address1], "Missing error when without company address"
   end
 
   test "is invalid without company title" do
@@ -130,6 +131,6 @@ class CompaniesControllerTest < ActionController::TestCase
   test "should have default company's address when accessing the companies page" do
     get :index
     default_company = Company.find_by(default: true)
-    assert_equal default_company.address, 'USA-98995'
+    assert_equal default_company.address1, '700 Craighead St'
   end
 end
