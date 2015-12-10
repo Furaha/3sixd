@@ -94,6 +94,27 @@ class CompaniesControllerTest < ActionController::TestCase
     assert company.errors[:title], "Missing error when without company title"
   end
 
+  test "is invalid without specifying a city where company is located" do
+    # Delete city before assert company is called
+    company = Company.new valid_company_params
+    valid_company_params.delete :city
+    assert company.errors[:city], "Missing error when without city for the company"
+  end
+
+  test "is invalid without specifying a state where company is located" do
+    # Delete city before assert company is called
+    company = Company.new valid_company_params
+    valid_company_params.delete :state
+    assert company.errors[:state], "Missing error when without state for the company"
+  end
+
+  test "is invalid without specifying a zip code for the company's address" do
+    # Delete city before assert company is called
+    company = Company.new valid_company_params
+    valid_company_params.delete :zip
+    assert company.errors[:zip], "Missing error when without zip code for the company's address"
+  end
+
   test "is invalid without company description" do
     # Delete description before assert company is called
     company = Company.new valid_company_params
@@ -132,5 +153,23 @@ class CompaniesControllerTest < ActionController::TestCase
     get :index
     default_company = Company.find_by(default: true)
     assert_equal default_company.address1, '700 Craighead St'
+  end
+
+  test "should have default company's city of where the company is located" do
+    get :index
+    default_company = Company.find_by(default: true)
+    assert_equal default_company.city, 'Nashville'
+  end
+
+  test "should have default company's state of where the company is located" do
+    get :index
+    default_company = Company.find_by(default: true)
+    assert_equal default_company.state, 'TN'
+  end
+
+  test "should have default company's address zip code of where the company is located" do
+    get :index
+    default_company = Company.find_by(default: true)
+    assert_equal default_company.zip, '37204'
   end
 end
