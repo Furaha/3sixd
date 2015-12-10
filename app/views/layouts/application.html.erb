@@ -47,11 +47,23 @@
                     <div class="footer-col col-md-4">
                       <h3>Location</h3>
                       <% if current_page?(companies_path) %>
-                        <p><%= @default_company.title %><br><%= @default_company.address %></p>
+                        <p>
+                          <%= @default_company.title %><br><%= @default_company.address1 %>
+                          <% if @default_company.address2.present? %>
+                            <br><%= @default_company.address2 %>
+                          <% end %>
+                          <br><%= @default_company.city %>, <%= @default_company.state %> <%= @default_company.zip %>
+                        </p>
                       <% elsif current_page?(new_company_path) %>
-                        <p>Company name<br>Address, City</p>
+                        <p>Company name<br>Address1 <br>Address2 <br>City, state zip code</p>
                       <% elsif @company.present? && !(current_page?(new_company_path)) %>
-                        <p><%= @company.title %><br><%= @company.address %></p>
+                        <p>
+                          <%= @company.title %><br><%= @company.address1 %>
+                          <% if @company.address2.present? %>
+                            <br><%= @company.address2 %>
+                          <% end %>
+                          <br><%= @company.city %>, <%= @company.state %> <%= @company.zip %>
+                        </p>
                       <% end %>
                     </div>
                     <div class="footer-col col-md-4">
