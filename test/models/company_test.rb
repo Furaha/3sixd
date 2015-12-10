@@ -15,8 +15,20 @@ class CompanyTest < ActiveSupport::TestCase
   test 'has description' do
     assert_equal 'The center for Software Development - Hire us - We will provide you with the best software in turn', @company.description
   end
-  test 'has address' do
-    assert_equal 'USA-78995', @company.address
+  test 'has address1' do
+    assert_equal '701 Craighead St', @company.address1
+  end
+  test 'has address2' do
+    assert_equal 'Suite 107', @company.address2
+  end
+  test 'has city' do
+    assert_equal 'Nashville', @company.city
+  end
+  test 'has state' do
+    assert_equal 'TN', @company.state
+  end
+  test 'has zip' do
+    assert_equal '37207', @company.zip
   end
   test 'has facebook account link' do
     assert_equal 'https://facebook.com', @company.facebook
