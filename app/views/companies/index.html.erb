@@ -19,7 +19,8 @@
 	            <th class="text-center">Title</th>
 	            <th class="text-center">Address</th>
 	            <th class="text-center">City</th>
-	            <th class="text-center">State & Zip</th>
+	            <th class="text-center">State</th>
+	            <th class="text-center">Zip</th>
 	            <th class="text-center">Actions</th>
 	          </tr>
 	        </thead>
@@ -30,7 +31,8 @@
 	              <td><%= company.title %></td>
 	              <td><%= company.address1 %></td>
 	              <td><%= company.city %></td>
-	              <td><%= company.state %> <%= company.zip %></td>    
+	              <td><%= company.state %></td>
+	              <td><%= company.zip %></td>   
 	              <td>
 	                <%= link_to "Edit", edit_company_path(company), 
 	                    class: "btn btn-sm btn-default" %> |
