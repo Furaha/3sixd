@@ -52,7 +52,7 @@
                           <% if @default_company.address2.present? %>
                             <br><%= @default_company.address2 %>
                           <% end %>
-                          <br><%= @default_company.city %>, <%= @default_company.state %> <%= @default_company.zip %>
+                          <br><%= @default_company.city %>, <%= @default_company.state.code %> <%= @default_company.zip %>
                         </p>
                       <% elsif current_page?(new_company_path) %>
                         <p>Company name<br>Address1 <br>Address2 <br>City, state zip code</p>
@@ -62,7 +62,7 @@
                           <% if @company.address2.present? %>
                             <br><%= @company.address2 %>
                           <% end %>
-                          <br><%= @company.city %>, <%= @company.state %> <%= @company.zip %>
+                          <br><%= @company.city %>, <%= @company.state.code %> <%= @company.zip %>
                         </p>
                       <% end %>
                     </div>

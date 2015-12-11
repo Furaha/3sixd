@@ -146,7 +146,7 @@
                           <% if @company.address2.present? %>
                             <br><%= @company.address2 %>
                           <% end %>
-                          <br><%= @company.city %>, <%= @company.state %> <%= @company.zip %>
+                          <br><%= @company.city %>, <%= @company.state.code %> <%= @company.zip %>
                         </p>
                     </div>
                     <div class="footer-col col-md-4">
