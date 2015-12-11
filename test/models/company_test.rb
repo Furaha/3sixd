@@ -25,7 +25,7 @@ class CompanyTest < ActiveSupport::TestCase
     assert_equal 'Nashville', @company.city
   end
   test 'has state' do
-    assert_equal 'TN', @company.state
+    assert_equal 'IL', @company.state.code
   end
   test 'has zip' do
     assert_equal '37207', @company.zip
