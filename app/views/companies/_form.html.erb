@@ -30,7 +30,7 @@
     </div>
     
     <%= f.label :state, "State:", class: "col-md-2 control-label" %>
-    <div class="col-md-4">
+    <div class="col-md-1">
       <%= f.collection_select :state_id, State.all, :id, :code, class: "form-control" %>
     </div>
   </div>
