@@ -58,7 +58,7 @@ class CompaniesControllerTest < ActionController::TestCase
     { name: "3sixd", title: '3sixd Consulting', description: 'Upload Cvs - Get hired', 
       about: '3sixD posts jobs for the positions which they are currently hiring for and 
       you can apply to the ones that interest you', address1: '701 Craighead St', address2: 'Suite 107',
-      city: 'Nashville', state: 'TN', zip: '37207', logo: "3six.png" }
+      city: 'Nashville', state_id: 1, zip: '37207', logo: "3six.png" }
   end
 
   test "is valid with valid company params" do
@@ -104,8 +104,8 @@ class CompaniesControllerTest < ActionController::TestCase
   test "is invalid without specifying a state where company is located" do
     # Delete city before assert company is called
     company = Company.new valid_company_params
-    valid_company_params.delete :state
-    assert company.errors[:state], "Missing error when without state for the company"
+    valid_company_params.delete :state_id
+    assert company.errors[:state_id], "Missing error when without state for the company"
   end
 
   test "is invalid without specifying a zip code for the company's address" do
@@ -164,7 +164,7 @@ class CompaniesControllerTest < ActionController::TestCase
   test "should have default company's state of where the company is located" do
     get :index
     default_company = Company.find_by(default: true)
-    assert_equal default_company.state, 'TN'
+    assert_equal default_company.state.code, 'TN'
   end
 
   test "should have default company's address zip code of where the company is located" do
