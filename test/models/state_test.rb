@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StateTest < ActiveSupport::TestCase
   def setup
-  	@state = states(:Tennessee)
+    @state = states(:Tennessee)
   end
   
   test "has a code TN" do
