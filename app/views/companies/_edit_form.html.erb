@@ -10,9 +10,31 @@
     </div>
   </div>
   <div class="form-group"> 
-    <%= f.label :address, "Company address:", class: "col-md-2 control-label" %>
+    <%= f.label :address1, "Company address1:", class: "col-md-2 control-label" %>
     <div class="col-md-4">
-      <%= f.text_field :address, required: true, class: "form-control" %>
+      <%= f.text_field :address1, required: true, class: "form-control" %>
+    </div>
+    
+    <%= f.label :address2, "Company address2:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :address2, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group"> 
+    <%= f.label :city, "City:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :city, required: true, class: "form-control" %>
+    </div>
+    
+    <%= f.label :state, "State:", class: "col-md-2 control-label" %>
+    <div class="col-md-1">
+      <%= f.collection_select :state_id, State.all, :id, :code, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group"> 
+    <%= f.label :zip, "Zip code:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :zip, required: true, class: "form-control" %>
     </div>
     
     <%= f.label :facebook, "Facebook account:", class: "col-md-2 control-label" %>
