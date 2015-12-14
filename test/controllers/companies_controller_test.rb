@@ -14,6 +14,10 @@ class CompaniesControllerTest < ActionController::TestCase
     @file ||= File.open(File.expand_path( '../../file/intro_image.png', __FILE__))
   end
 
+  def css
+    @file ||= File.open(File.expand_path( '../../file/customtheme.css', __FILE__))
+  end
+
   def uploaded_logo(klass, attribute, logo, content_type = 'image/png')
     filename = File.basename(logo.path)
     klass_label = klass.to_s.underscore
@@ -48,6 +52,23 @@ class CompaniesControllerTest < ActionController::TestCase
     assert_equal(File.basename(intro_image.path), company.intro_image_identifier)
   end
 
+  def uploaded_css(klass, attribute, css, content_type = 'text/css')
+    filename = File.basename(css.path)
+    klass_label = klass.to_s.underscore
+   
+    ActionDispatch::Http::UploadedFile.new(
+      tempfile: css,
+      filename: filename,
+      head: %Q{Content-Disposition: form-data; name="#{klass_label}[#{attribute}]"; filename="#{filename}"},
+      content_type: content_type
+    )
+  end
+
+  def css_uploading
+    company = Company.last
+    assert_equal(File.basename(css.path), company.css_identifier)
+  end
+
   def company_name_after_logo_uploaded
     name = '3sixD'
     company = Company.last
@@ -58,7 +79,7 @@ class CompaniesControllerTest < ActionController::TestCase
     { name: "3sixd", title: '3sixd Consulting', description: 'Upload Cvs - Get hired', 
       about: '3sixD posts jobs for the positions which they are currently hiring for and 
       you can apply to the ones that interest you', address1: '701 Craighead St', address2: 'Suite 107',
-      city: 'Nashville', state_id: 1, zip: '37207', logo: "3six.png" }
+      city: 'Nashville', state_id: 1, zip: '37207', logo: "3six.png", css: "customtheme.css" }
   end
 
   test "is valid with valid company params" do
