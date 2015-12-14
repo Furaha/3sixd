@@ -1,6 +1,7 @@
 class Company < ActiveRecord::Base
   mount_uploader :logo,        ImageUploader
   mount_uploader :intro_image, IntroImageUploader
+  mount_uploader :css,         CssUploader
   
   validates :name,        presence: true
   validates :title,       presence: true
