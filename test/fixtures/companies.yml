@@ -14,7 +14,6 @@
   google_plus: https://plus.google.com
   twitter: https://twitter.com
   linkedin: https://www.linkedin.com
-  dribble: https://dribble.com
   logo: 3sixd.png
   default: 'true'
 
@@ -32,6 +31,5 @@ Furaha:
   google_plus: https://plus.google.com
   twitter: https://twitter.com
   linkedin: https://www.linkedin.com
-  dribble: https://dribble.com
   logo: furaha.png
   default: 'false'

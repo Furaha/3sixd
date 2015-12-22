@@ -42,7 +42,4 @@ class CompanyTest < ActiveSupport::TestCase
   test 'has linkedin account link' do
     assert_equal 'https://www.linkedin.com', @company.linkedin
   end
-  test 'has dribble account link' do
-    assert_equal 'https://dribble.com', @company.dribble
-  end
 end
