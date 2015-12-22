@@ -52,14 +52,14 @@
       <%= f.text_field :twitter, class: "form-control" %>
     </div>
   </div>
-  <div class="form-group"> 
-    <%= f.label :dribble, "Dribble account:", class: "col-md-2 control-label" %>
-    <div class="col-md-4">
-      <%= f.text_field :dribble, class: "form-control" %>
-    </div>
+  <div class="form-group">
     <%= f.label :linkedin, "Linkedin account:", class: "col-md-2 control-label" %>
     <div class="col-md-4">
       <%= f.text_field :linkedin, class: "form-control" %>
+    </div>
+    <%= f.label :about, "Company about:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_area :about, required: true, class: "form-control" %>
     </div>
   </div>
   <div class="form-group"> 
@@ -67,9 +67,10 @@
     <div class="col-md-4">
       <%= f.text_area :description, required: true, class: "form-control" %>
     </div>
-    <%= f.label :about, "Company about:", class: "col-md-2 control-label" %>
-    <div class="col-md-4">
-      <%= f.text_area :about, required: true, class: "form-control" %>
+    <%= f.label :css, "Custom CSS:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">    
+      <%= f.file_field :css %>
+      <%= f.hidden_field :css_cache %>
     </div>
   </div>
   <div class="form-group"> 
@@ -82,13 +83,6 @@
     <div class="col-md-4">    
       <%= f.file_field :intro_image %>
       <%= f.hidden_field :intro_image_cache %>
-    </div>
-  </div>
-  <div class="form-group"> 
-    <%= f.label :css, "Custom CSS:", class: "col-md-2 control-label" %>
-    <div class="col-md-4">    
-      <%= f.file_field :css %>
-      <%= f.hidden_field :css_cache %>
     </div>
   </div>
   <div class="form-group">
