@@ -57,15 +57,16 @@
       <%= f.text_field :twitter, class: "form-control", placeholder: "https://twitter.com/palmer" %>
     </div>
   </div>
-  <div class="form-group"> 
-    <%= f.label :dribble, "Dribble account:", class: "col-md-2 control-label" %>
-    <div class="col-md-4">
-      <%= f.text_field :dribble, class: "form-control", placeholder: "https://dribbble.com/palmer" %>
-    </div>
+  <div class="form-group">
     <%= f.label :linkedin, "Linkedin account:", class: "col-md-2 control-label" %>
     <div class="col-md-4">
       <%= f.text_field :linkedin, class: "form-control", 
         placeholder: "https://www.linkedin.com/palmer" %>
+    </div>
+    <%= f.label :about, "Company about:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_area :about, required: true, class: "form-control",
+        placeholder: "Palmer Tech is one of the best leading tech companies in USA with over 500 millions of customers worldwide, one of the best place to explore tech" %>
     </div>
   </div>
   <div class="form-group"> 
@@ -74,10 +75,10 @@
       <%= f.text_area :description, required: true, class: "form-control", 
         placeholder: "Best Technologies Choices - With best products - For better life" %>
     </div>
-    <%= f.label :about, "Company about:", class: "col-md-2 control-label" %>
-    <div class="col-md-4">
-      <%= f.text_area :about, required: true, class: "form-control",
-        placeholder: "Palmer Tech is one of the best leading tech companies in USA with over 500 millions of customers worldwide, one of the best place to explore tech" %>
+    <%= f.label :css, "Custom CSS:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">    
+      <%= f.file_field :css %>
+      <%= f.hidden_field :css_cache %>
     </div>
   </div>
   <div class="form-group"> 
@@ -90,13 +91,6 @@
     <div class="col-md-4">    
       <%= f.file_field :intro_image %>
       <%= f.hidden_field :intro_image_cache %>
-    </div>
-  </div>
-  <div class="form-group"> 
-    <%= f.label :css, "Custom CSS:", class: "col-md-2 control-label" %>
-    <div class="col-md-4">    
-      <%= f.file_field :css %>
-      <%= f.hidden_field :css_cache %>
     </div>
   </div>
   <div class="form-group">

@@ -128,21 +128,6 @@
                                 </a>
                               <% end %>
                             </li>
-                            <li>
-                              <% if current_page?(companies_path) %>
-                                <a href="<%= @default_company.dribble %>" class="btn-social btn-outline"
-                                  target="_blank"><i class="fa fa-fw fa-dribbble"></i>
-                                </a>
-                              <% elsif current_page?(new_company_path) %>
-                                <a href="#" class="btn-social btn-outline">
-                                  <i class="fa fa-fw fa-dribbble"></i>
-                                </a>
-                              <% elsif @company.present? && !(current_page?(new_company_path)) %>
-                                <a href="<%= @company.dribble %>" class="btn-social btn-outline"
-                                  target="_blank"><i class="fa fa-fw fa-dribbble"></i>
-                                </a>
-                              <% end %>
-                            </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
