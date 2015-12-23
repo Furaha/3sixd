@@ -42,4 +42,7 @@ class CompanyTest < ActiveSupport::TestCase
   test 'has linkedin account link' do
     assert_equal 'https://www.linkedin.com', @company.linkedin
   end
+  test 'has footer about' do
+    assert_equal 'Furaha makes softwares for your needs', @company.footer_about
+  end
 end

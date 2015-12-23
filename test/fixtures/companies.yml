@@ -16,6 +16,7 @@
   linkedin: https://www.linkedin.com
   logo: 3sixd.png
   default: 'true'
+  footer_about: 3sixD posts jobs for the positions which they are currently hiring for and you can apply to the ones that interest you
 
 Furaha:
   name: Furaha
@@ -33,3 +34,4 @@ Furaha:
   linkedin: https://www.linkedin.com
   logo: furaha.png
   default: 'false'
+  footer_about: Furaha makes softwares for your needs
