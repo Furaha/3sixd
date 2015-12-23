@@ -75,10 +75,10 @@
       <%= f.text_area :description, required: true, class: "form-control", 
         placeholder: "Best Technologies Choices - With best products - For better life" %>
     </div>
-    <%= f.label :css, "Custom CSS:", class: "col-md-2 control-label" %>
-    <div class="col-md-4">    
-      <%= f.file_field :css %>
-      <%= f.hidden_field :css_cache %>
+    <%= f.label :footer_about, "Footer about:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_area :footer_about, required: true, class: "form-control", 
+        placeholder: "3sixD posts jobs for the positions which they are currently hiring" %>
     </div>
   </div>
   <div class="form-group"> 
@@ -91,6 +91,13 @@
     <div class="col-md-4">    
       <%= f.file_field :intro_image %>
       <%= f.hidden_field :intro_image_cache %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :css, "Custom CSS:", class: "col-md-2 control-label" %>
+    <div class="col-md-4">    
+      <%= f.file_field :css %>
+      <%= f.hidden_field :css_cache %>
     </div>
   </div>
   <div class="form-group">
