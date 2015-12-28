@@ -7,6 +7,7 @@ class Company < ActiveRecord::Base
   validates :title,       presence: true
   validates :description, presence: true
   validates :about,       presence: true
+  validates :footer_about, presence: true
   validates :address1,    presence: true
   validates :city,        presence: true
   validates :zip,         presence: true, length: { is: 5 }

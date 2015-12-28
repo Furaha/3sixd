@@ -79,7 +79,8 @@ class CompaniesControllerTest < ActionController::TestCase
     { name: "3sixd", title: '3sixd Consulting', description: 'Upload Cvs - Get hired', 
       about: '3sixD posts jobs for the positions which they are currently hiring for and 
       you can apply to the ones that interest you', address1: '701 Craighead St', address2: 'Suite 107',
-      city: 'Nashville', state_id: 1, zip: '37207', logo: "3six.png", css: "customtheme.css" }
+      city: 'Nashville', state_id: 1, zip: '37207', logo: "3six.png", css: "customtheme.css", 
+      footer_about: 'Furaha makes softwares for your needs' }
   end
 
   test "is valid with valid company params" do
@@ -99,6 +100,13 @@ class CompaniesControllerTest < ActionController::TestCase
     company = Company.new valid_company_params
     valid_company_params.delete :about
     assert company.errors[:about], "Missing error when without company about"
+  end
+
+  test "is invalid without company footer about" do
+    # Delete footer about before assert company is called
+    company = Company.new valid_company_params
+    valid_company_params.delete :footer_about
+    assert company.errors[:footer_about], "Missing error when without footer about"
   end
 
   test "is invalid without company address" do

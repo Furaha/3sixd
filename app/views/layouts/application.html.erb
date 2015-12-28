@@ -131,8 +131,18 @@
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                      <h3>About 3sixD</h3>
-                      <p>3sixD posts jobs for the positions which they are currently hiring for and you can apply to the ones that interest you</p>
+                      <% if current_page?(companies_path) %>
+                        <h3>About <%= @default_company.name %></h3>
+                        <p><%= @default_company.footer_about %></p>
+                      <% elsif current_page?(new_company_path) %>
+                        <h3>About Company</h3>
+                        <p>
+                          Tell us more about your company by providing the details on the field footer about from the company's form
+                        </p>
+                      <% elsif @company.present? && !(current_page?(new_company_path)) %>
+                        <h3>About <%= @company.name %></h3>
+                        <p><%= @company.footer_about %></p>
+                      <% end %>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,9 @@ Company.create!([
     posted.", address1: "700 Craighead St", address2: "Suite 106", city: "Nashville", 
     state_id: State.find_by_code('TN').id, zip: "37204", facebook: "https://facebook.com", 
     twitter: "https://twitter.com", google_plus: "https://plus.google.com", 
-    linkedin: "https://www.linkedin.com", default: 'true'
+    linkedin: "https://www.linkedin.com", default: 'true',
+    footer_about: "3sixD posts jobs for the positions which they are currently hiring for and you can 
+    apply to the ones that interest you"
   },
   { 
     name: "Furaha", title: "Furaha Software Inc,",
@@ -20,6 +22,6 @@ Company.create!([
     address1: "701 Craighead St", address2: "Suite 107", city: "Nashville", 
     state_id: State.find_by_code('IL').id, zip: "37207", facebook: "https://facebook.com", 
     twitter: "https://twitter.com", google_plus: "https://plus.google.com", 
-    linkedin: "https://www.linkedin.com", default: 'false'
+    linkedin: "https://www.linkedin.com", default: 'false', footer_about: "Furaha makes softwares for your needs"
   }
 ])
